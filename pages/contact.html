@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title> Wiedźmin </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/main/logo_white.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/style_contact.css" type="text/css">
+
+    <!-- SKRYPT GŁÓWNY -->
+    <script src="../JS/glownySkrypt.js"></script>
+
+    <!-- SLIDER - W3School -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- LightBox -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    <script src="../dodatki/lightbox2-2.11.1/src/js/lightbox.js"></script>
+    <link rel="stylesheet" href="../dodatki/lightbox2-2.11.1/src/css/lightbox.css">
+
+    <!-- Skrypt obsługujący Formularz -->
+    <script src="../JS/contact.js"></script>
+</head>
+
+<body class="myclass">
+    <header id="header" class="myclass">
+        <!-- TREŚĆ DODAWANA W SKRYPCIE GŁÓWNYM -->
+    </header>
+
+    <!-- MAIN -->
+    <main class="myclass">
+        <!-- Treść strony -->
+        <section class="myclass">
+            <article class="myclass">
+                <h1 class="myclass"> Kontakt </h1>
+                <p class="myclass"> Jeżeli masz jakieś pytanie związane z uniwersum Wiedźmina, napisz do nas! Czekamy na
+                    twoje pytania!
+                </p>
+            </article>
+
+            <h4 class="myclass"> Formularz kontaktowy</h4>
+            <form method="POST" action="#" autocomplete="off">
+                <fieldset class="myclass">
+                    <legend class="myclass"> Podstawowe informacje </legend>
+                    Poinformuj nas w jakim celu się z nami kontaktujesz. Dzięki temu będziemy wiedzieć jak ci pomóc.
+                    Pamiętaj pola oznaczone <span> * </span> są obowiązkowe!
+
+                    <table>
+                        <tr>
+                            <td> Powód kontaktu* </td>
+                            <td>
+                                <select size="1" name="powod" title="Powiedz nam o co chodzi." id="powodKontaktu" class="obowiazkowe">
+                                    <option value="Strona nie działa"> Strona nie działa </option>
+                                    <option value="Niepoprawne informcje na stronie"> Niepoprawne informcje na stronie
+                                    </option>
+                                    <option value="Pytanie - książki"> Pytanie - książki</option>
+                                    <option value="Pytanie - Netflix"> Pytanie - Netflix</option>
+                                    <option value="Pytanie - gry"> Pytanie - gry</option>
+                                    <option value="Inne" selected> Inne </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Czy to ważne?* </td>
+                            <td>
+                                <label> <input type="radio" name="piorytet" value="TAK" required checked
+                                        title="Musimy wiedzieć czy to dla ciebie ważne!" class="obowiazkowe">TAK</label>
+                                <label><input type="radio" name="piorytet" value="NIE"> NIE</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Jak ważna jest ta sprawa?*</td>
+                            <td><input required type="number" min="1" step="1" max="10" placeholder="5" id="jakWazne" class="obowiazkowe">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="last_row">Opisz nam na czym polega problem:*</td>
+                        </tr>
+                    </table>
+
+                    <textarea name="opis" class="myclass obowiazkowe" id="opis"> Szczegółowy opis problemu</textarea>
+                </fieldset>
+
+                <fieldset class="myclass">
+                    <legend class="myclass"> Dane kontaktowe</legend>
+                    Wypełnij te dane, żebyśmy wiedzieli z kim rozmawiamy.
+
+                    <table>
+                        <tr>
+                            <td> Imię*: </td>
+                            <td> <input id="imie" required type="text" name="imie" placeholder="Wpisz imię"
+                                    title="Powiedz nam jak się nazywasz" pattern="^[a-zA-ZęóąśłżźćńĘÓĄŚŁŻŹĆŃ]{3,}" class="obowiazkowe">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Nick: </td>
+                            <td> <input id="nick" type="text" name="nick" placeholder="Wpisz swoj nick"> </td>
+                        </tr>
+                        <tr>
+                            <td> E-mail*: </td>
+                            <td> <input id="email" required type="email" name="email" placeholder="twoja@poczta.pl"
+                                    title="Ten adres jest niepoprawny" class="obowiazkowe"></td>
+                        </tr>
+                        <tr>
+                            <td> Numer telefonu*: </td>
+                            <td><input id="nrTelefonu" required type="tel" name="telefon" placeholder="123456789"
+                                    pattern="^[+0-9-]{9,}" class="obowiazkowe"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset class="myclass">
+                    <legend class="myclass"> Chcemy poznać twoje zdanie! </legend>
+                    <p class="myclass"> Skoro już się z nami kontaktujesz, to chcielibyśmy zadać Ci kilka dodatkowych
+                        pytań. Dzięki nim
+                        poznamy Cię bliżej, i będziemy mogli dostosować kolejne zmiany właśnie do twoich preferencji. To
+                        jak? Poświęcisz nam chwilkę?
+                    </p>
+
+                    <table>
+                        <tr>
+                            <td> Czy polecisz naszą stronę innym? </td>
+                            <td>
+                                <label><input type="radio" name="share" value="Tak" /> Pewnie</label>
+                                <label><input type="radio" name="share" value="Może" /> Może</label>
+                                <label><input type="radio" name="share" value="Nie" /> Raczej nie</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Którą częśc uniwersum lubisz najbardziej? </td>
+                            <td>
+                                <label><input type="checkbox" name="like" value="Książki" /> Książki</label>
+                                <label><input type="checkbox" name="like" value="Gry" /> Gry</label>
+                                <label><input type="checkbox" name="like" value="Filmy" /> Serial</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Którą postać lubisz najbardziej? </td>
+                            <td>
+                                <input id="postac" list="bohaterowie" placeholder="Wpisz swoją postać"
+                                    title="Ups! Chyba się pomyliłeś!">
+                                <datalist id="bohaterowie">
+                                    <option value="Geralt"></option>
+                                    <option value="Yennefer"></option>
+                                    <option value="Ciri"></option>
+                                    <option value="Jaskier"></option>
+                                    <option value="Myszowór"></option>
+                                    <option value="Triss"></option>
+                                </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="last_row">Powiedz nam dlaczego lubisz ją najbardziej? </td>
+                        </tr>
+                    </table>
+
+                    <textarea id="opisPostaci" cols="100" rows="10" name="opis_bohatera"
+                        class="myclass"> Moją ulubioną postacią z Wiedźmina jest ...</textarea>
+                </fieldset>
+
+                <div id="buttony">
+                    <button id="wyslij" type="submit"> Wyślij </button>
+                    <button id="wyczysc" type="reset"> Wyczyść </button>
+                </div>
+            </form>
+        </section>
+
+        <aside class="myclass" id="aside">
+            <!-- TREŚĆ DODAWANA W SKRYPCIE GŁÓWNYM -->
+        </aside>
+        <footer class="myclass" id="footer">
+            <!-- TREŚĆ DODAWANA W SKRYPCIE GŁÓWNYM -->
+        </footer>
+    </main>
+</body>
+
+</html>

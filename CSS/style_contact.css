@@ -1,0 +1,67 @@
+/* Arkusz CSS dla podstrony Kontakt */
+/* Formularz */
+fieldset.myclass{
+    margin: 10px auto;
+    padding: 10px;
+    width: 90%;
+    background-color: #c7cdcb;
+    border: 2px solid #494948;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px #494948;
+}
+
+legend.myclass{
+    text-align: center;
+    font-family: 'Luminari';
+    font-size: 120%;
+}
+
+form.myclass span{
+    color: firebrick !important;
+}
+
+textarea.myclass{
+    display: block;
+    margin: 0 auto;
+    padding: 5px 20px;
+    width: 90%;
+    height: 100px;
+
+    background-color: inherit;
+    border: 2px solid #494948;
+    border-radius: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+div#buttony{
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+div#buttony input{
+    padding: 0 2px;
+    height: 1.5em !important;
+    line-height: 1.5em !important;
+    background-color: #c7cdcb !important;
+    color: #000000 !important;
+}
+/* Tabele */
+table{
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    max-width: 90%;
+}
+tr:nth-of-type(2n){
+    background-color: #848787;
+}
+
+td:first-child{
+    text-align: right;
+}
+
+td.last_row{
+    text-align: center;
+}

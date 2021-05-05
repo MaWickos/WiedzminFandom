@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Sklep u Vesemira</title>
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/shop-item.css" rel="stylesheet">
+
+  <!-- Skrypt obsługujący sklep -->
+  <script src="../js/koszyk.js"></script>
+</head>
+
+<body>
+
+  <!-- Górne menu nawigacyjne -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Sklep u Vesemira</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../../../pages/index.html"> Świat Wiedźmina </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="koszyk.html">Koszyk</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Zawartość strony -->
+  <div class="container">
+    <div class="row">
+
+      <!-- Boczne menu -->
+      <div class="col-lg-3">
+        <h1 class="my-4 myclass">Alchemia</h1>
+        <div class="list-group">
+          <a href="index.html" class="list-group-item">Strona główna</a>
+          <a href="rynsztunek.html" class="list-group-item">Rynsztunek</a>
+          <a href="alchemia.html" class="list-group-item active">Alchemia</a>
+          <a href="koszyk.html" class="list-group-item">Koszyk</a>
+        </div>
+      </div>
+
+      <!-- Główna zawartośc strony -->
+      <div class="col-lg-9">
+        <br>
+        <!-- Większe okienko (sekcja) -->
+        <div>
+          <h1 class="myclass"> Oleje </h1>
+
+          <!-- Okienko -->
+          <div class="card mt-4">
+            <!-- <img class="card-img-top img-fluid" src="#" alt=""> -->
+            <div class="card-body">
+              <h3 class="card-title myclass">Olej przeciw trupojadom</h3>
+              <h4>15$</h4>
+              <input id="cena_opt" hidden disabled type="number" value="15">
+                <ul>
+                  <li>Receptariusz: Księga Jaskółki</li>
+                  <li>Baza: Psie sadło, Gęsi smalec, Łój, Niedźwiedzie sadło lub Pasta alchemiczna</li>
+                  <li>Działanie: zwiększa obrażenia zadawane trupojadom i innym potworom cmentarnym.</li>
+                  <li>Czas działania: długi</li>
+                  <li>Opis: Trupojady nawykły do trujących wyziewów. Istnieje jednak olej, który powali nawet ghula i
+                    graveira, jeśli tylko pokryte nim ostrze zrani potwora.</li>
+                </ul>
+
+              <!-- Dodanie do koszyka -->
+              <div class="przyciski_produkt">
+                <input type="number" min="1" max="99" step="1" value="1" id="ilosc_opt">
+                <button id="opt" onclick="dodajDoKoszyka('opt')">Dodaj do koszyka </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Okienko -->
+          <div class="card mt-4">
+            <!-- <img class="card-img-top img-fluid" src="#" alt=""> -->
+            <div class="card-body">
+              <h3 class="card-title myclass">Olej przeciw ornitoreptylom</h3>
+              <h4 class="myclass">20$</h4>
+              <input id="cena_opo" hidden disabled type="number" value="20">
+                <ul>
+                  <li>Receptariusz: Księga Rosomaka</li>
+                  <li>Baza: Gęsi smalec, Łój, Niedźwiedzie sadło lub Pasta alchemiczna</li>
+                  <li>Działanie: znacznie zwiększa obrażenia zadawane ornitoreptylom.</li>
+                  <li>Czas działania: długi</li>
+                  <li>Opis: Zwany jest czasem Zgubą Bazyliszka. To trucizna zabójcza dla wszystkich gadów, nawet
+                    okrytego złą sławą bazyliszka.</li>
+                </ul>
+
+              <!-- Dodanie do koszyka -->
+              <div class="przyciski_produkt">
+                <input type="number" min="1" max="99" step="1" value="1" id="ilosc_opo">
+                <button id="opo" onclick="dodajDoKoszyka('opo')">Dodaj do koszyka </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Większe okienko -->
+        <div>
+          <br>
+          <h1 class="myclass"> Eliksiry </h1>
+
+          <!-- Okienko -->
+          <div class="card mt-4">
+            <img class="card-img-top img-fluid" src="#" alt="">
+            <div class="card-body">
+              <h3 class="card-title myclass">Biała Mewa</h3>
+              <h4 class="myclass">35$</h4>
+              <input id="cena_ebm" hidden disabled type="number" value="35">
+                <ul>
+                  <li>Receptariusz: Księga Jaskółki</li>
+                  <li>Baza: Biała Mewa, Lokalna pieprzówka, Nilfgaardzka cytrynówka, Redańska żołądkowa mocna, Spirytus
+                    krasnoludzki, Żołnierski bimber, Temerska żytnia, Wiśniówka na spirytusie, Nalewka śliwkowa,
+                    Spirytus temerski, Spirytus zerrikański, Alkahest, Azoth, Nalewka z mandragory, Spirytus na krwi
+                    wywerny lub Piołunówka</li>
+                  <li>Działanie: magiczny napój, który służy również do wytwarzanie innych eliksirów</li>
+                  <li>Czas działania: długi</li>
+                  <li>Toksyczność: średnia</li>
+                  <li>Opis: Biała Mewa jest łagodnym halucynogenem, który uprzyjemnia wiedźminom długie i mroźne
+                    wieczory podczas zimowania w twierdzy.</li>
+                </ul>
+
+              <!-- Dodanie do koszyka -->
+              <div class="przyciski_produkt">
+                <input type="number" min="1" max="99" step="1" value="1" id="ilosc_ebm">
+                <button id="ebm" onclick="dodajDoKoszyka('ebm')">Dodaj do koszyka </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Okienko -->
+          <div class="card mt-4">
+            <img class="card-img-top img-fluid" src="#" alt="">
+            <div class="card-body">
+              <h3 class="card-title myclass">Kot</h3>
+              <h4 class="myclass">17$</h4>
+              <input id="cena_Kot" hidden disabled type="number" value="17">
+                <ul>
+                  <li>Receptariusz: Księga Jaskółki</li>
+                  <li>Baza: Biała Mewa, Lokalna pieprzówka, Nilfgaardzka cytrynówka, Redańska żołądkowa mocna, Spirytus
+                    krasnoludzki, Żołnierski bimber, Temerska żytnia, Wiśniówka na spirytusie, Nalewka śliwkowa,
+                    Spirytus temerski, Spirytus zerrikański, Alkahest, Azoth, Nalewka z mandragory, Spirytus na krwi
+                    wywerny lub Piołunówka</li>
+                  <li>Działanie: umożliwia widzenie w całkowitej ciemności.</li>
+                  <li>Czas działania: długi</li>
+                  <li>Toksyczność: niska</li>
+                  <li>Opis: Kot jest ponoć pierwszym eliksirem stworzonym specjalnie dla wiedźminów. Mikstura modyfikuje
+                    gałki oczne i wzmacnia zdolność widzenia w słabym świetle.</li>
+                </ul>
+
+              <!-- Dodanie do koszyka -->
+              <div class="przyciski_produkt">
+                <input type="number" min="1" max="99" step="1" value="1" id="ilosc_Kot">
+                <button id="Kot" onclick="dodajDoKoszyka('Kot')">Dodaj do koszyka </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stopka -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; MW 2020</p>
+    </div>
+
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

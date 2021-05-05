@@ -1,0 +1,127 @@
+/* Arkusz CSS dla strony głównej */
+
+/* FlexBox */
+.flexbox{
+    margin: 0px auto;
+    padding: 0 5px;
+    width: 100%;
+
+    /* FlexBox */
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;  
+}
+
+.left{
+    flex-direction: row;
+}
+
+.right{
+    flex-direction: row-reverse;
+}
+
+.flexbox > blockquote{      /* Cytat */
+    display: block;
+    margin: 5px auto;
+    padding: 5px 5px;
+    width: 60%;
+
+    border-left: 1px solid #030505;
+    text-align: center;
+    font-size: 19px;
+    font-style: italic;
+    font-family: 'Monotype Corsiva';
+}
+
+.flexbox > blockquote > span{
+    display: block;
+    margin: 0;
+    padding: 0 10px 0 0;
+    text-align: right;
+    font-style: normal !important;
+    font-weight: bold;
+}
+
+/* LEFT */
+.flexbox img.myclassleft{
+    margin: 10px 10px;
+    padding: 0;
+    width: 38%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px #848484;
+}
+
+
+/* RIGHT */
+.flexbox img.myclassright{
+    margin: 10px 10px;
+    padding: 0;
+    width: 38%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: -10px 10px 20px #848484;
+}
+
+
+/*** *** *** *** *** *** *** SLIDERY *** *** *** *** *** ***/
+.myslider{                                                                                          /* NOWE! */
+    width: 38% !important;
+}
+
+.myslider img.myclassleft{                                                                          /* NOWE! */
+    display: block;
+    margin: 10px auto;
+    padding: 0;
+    width: 90% !important;
+    height: auto;
+    border-radius: 5px; 
+    box-shadow: 5px 5px 10px #848484;
+}
+
+/*** *** RWD *** ***/
+@media screen and (min-width: 1081px){
+    .flexbox > blockquote#max1080{
+            display: none;
+    }
+}
+ 
+@media screen and (min-width: 721px) and (max-width: 1080px){
+    .flexbox > blockquote#greater1080{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 720px){
+    .flexbox > blockquote#max1080{
+        display: none;
+    }
+
+    .flexbox{
+        margin: 0 auto;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .flexbox img.myclassleft, .flexbox img.myclassright{
+        margin: 0 auto;
+        width: 90%;
+        order: 2;
+    }
+
+    .flexbox blockquote{
+        margin: 0 auto;
+        width: 95%;
+        order: 1;
+    }
+
+    .myslider{                                                                                              /* NOWE */
+        margin: 10px 10px;
+        padding: 0;
+        width: 90% !important;
+    }
+}

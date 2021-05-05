@@ -1,0 +1,158 @@
+/* Arkusz CSS dla książek */
+
+
+.flexbox{
+    margin: 20px auto;
+    padding: 0;
+    width: 100%;
+
+    /* FlexBox*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Opowaidania */
+.flexbox img{
+    margin: 0 10px;
+    padding: 0;
+    width: 20%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 15px 15px 25px #494949;
+}
+
+article ol{
+    margin: 0 10px;
+}
+
+article ol > li{
+    list-style-type: decimal;
+}
+
+article  ul.list{
+    display: block;
+    width: 100%;
+    margin: 0 10px;
+}
+
+article  ul.list > li{
+    list-style-type: square;
+}
+
+.flexbox p{
+    width: 70%;
+}
+
+
+/* Saga */
+div.books{
+    margin: 10px auto;
+    padding: 0;
+    width: 100%;
+
+    /* FlexBox*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+article.books{
+    margin: 0;
+    padding: 0;
+    width: 30%;
+}
+
+img.books{
+    display: block;
+    margin: 5px auto;
+    padding: 0;
+    width: 90%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px #494949;
+}
+
+p.books{
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    border-top: 1px solid #494949;
+    border-bottom: 1px solid #494949;
+}
+
+h3.books{
+    text-align: center;
+    border-bottom: 1px solid #494949;
+    font-family: 'Luminari';
+}
+
+
+/*** *** RWD *** ***/
+@media screen and (min-width: 721px) and (max-width: 1080px){
+    /* Do opowiadań */
+    .flexbox{
+        flex-wrap: wrap;
+    }
+
+    .flexbox img{
+        margin: 0;
+        width: 45%;
+    }
+    .flexbox > p{
+        width: 100%;
+        order: 99;
+    }
+
+    /* Do sagi */
+    article.books{
+        width: 45%;
+    }
+
+    img.books{
+        width: 100%;
+    }
+    
+}
+
+
+@media screen and (max-width: 720px){
+    /* Do opowiadan */
+    .flexbox{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .flexbox img{
+        margin: 10px auto;
+    }
+
+    .flexbox img{
+        width: 60%;
+    }
+
+    .flexbox p{
+        display: block;
+        width: 100%;
+    }
+
+    /* Do sagi*/
+
+    article.books{
+        margin: 0 auto 10px auto;
+        width: 90%;
+    }
+
+    img.books{
+        width: 75%;
+    }
+
+}
